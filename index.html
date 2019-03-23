@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body id="gradient">
+    <!-- Start your project here-->
+    <div class="container-fluid">
+      <div  class="row text-center">
+        <div class="col">
+          <h2 class="h1text text-white text-center text-capitalize">set background linear-gradient</h2>
+          <br><br>
+          <input id="inputleft" onclick="colorvalueleft()" type="color" name="" value="#124352" placeholder="">
+          <input id="inputright" onclick="colorvalueleft()" type="color" name="" value="#637644" placeholder="">
+          <input id="inputcenter" onclick="colorvalueleft()" type="color" name="" value="#354874" placeholder="">
+        </div>
+      </div>
+    </div>
+      <div class="text-center mt-4">
+        <button onclick="leftbutton()" id="left" type="button" class="btn btn-outline-default" ripple-radius>LEFT</button>
+        <button onclick="rightbutton()" id="right" type="button" class="btn btn-outline-default" ripple-radius>RIGHT</button>
+        <button onclick="topbutton()" id="top1" type="button" class="btn btn-outline-default" ripple-radius>TOP</button>
+        <button onclick="bottombutton()" id="bootom" type="button" class="btn btn-outline-default" ripple-radius>BOTTOM</button>
+      </div>
+    <!-- /Start your project here-->
+    <!-- SCRIPTS -->
+    
+    
+    
+    
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+    <script>
+    
+    inputleft.addEventListener('input', colorvalueleft);
+    inputright.addEventListener('input', colorvalueleft);
+    // top.addEventListener('click',topbutton );
+    function colorvalueleft()
+    {
+    
+    gradient.style.background=`linear-gradient(to right,${inputleft.value},${inputright.value},${inputcenter.value})`;
+    }
+    function leftbutton()
+    {
+    gradient.style.background=`linear-gradient(to left,${inputleft.value},${inputright.value},${inputcenter.value})`;
+    }
+    
+    function topbutton()
+    {
+    gradient.style.background=`linear-gradient(to top,${inputleft.value},${inputright.value},${inputcenter.value})`;
+    }
+    function rightbutton()
+    {
+    gradient.style.background=`linear-gradient(to right,${inputleft.value},${inputright.value},${inputcenter.value})`;
+    }
+    
+    function bottombutton()
+    {
+    gradient.style.background=`linear-gradient(to bottom,${inputleft.value},${inputright.value},${inputcenter.value})`;
+    }
+    </script>
+  </body>
+</html>

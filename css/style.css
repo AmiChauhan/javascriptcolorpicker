@@ -1,0 +1,9 @@
+.h1text
+{
+   font-size: 3em;
+   font-family: fantasy;
+}
+#gradient{
+	height:100vh;
+	background-image:linear-gradient(to right,#124352,#637644,#354874);
+}
